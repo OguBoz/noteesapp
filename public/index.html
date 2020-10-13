@@ -4,8 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        form {
+            background-color: #444;
+            padding: 1.5rem;
+            border: 1px solid black;
+            margin: 20px 0;
+            color: white;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        h2 {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: chartreuse;
+            color: black;
+            border-radius: 7px;
+            border: none;
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    Hello worl how are you
+    <div class="container">
+        <form>
+            <h2>Get All Notes</h2>
+                <button type="submit" id="getNotes">Get</button>
+        </form>
+    
+        <form>
+            <h2>Get Note</h2>
+            <fieldset>
+                <label>Id</label>
+                <input type="text" id="getNoteId">
+            </fieldset>
+            <button type="submit" id="getNote">Get</button>
+        </form>
+
+        <form>
+            <h2>Create Note</h2>
+            <fieldset>
+                <label>Title</label>
+                <input type="text" id="postTitle">
+            </fieldset>
+
+            <fieldset>
+                <label>Body</label>
+                <input type="text" id="postBody">
+            </fieldset>
+                
+            <button type="submit" id="postNote">Create</button>
+        </form>
+
+        <form>
+            <h2>Update Note</h2>
+            <fieldset>
+                <label>Id</label>
+                <input type="text" id="updateId">
+            </fieldset>
+
+            <fieldset>
+                <label>Title</label>
+                <input type="text" id="updateTitle">
+            </fieldset>
+
+            <fieldset>
+                <label>Body</label>
+                <input type="text" id="updateBody">
+            </fieldset>
+                
+            <button type="submit" id="updateNote">Update</button>
+        </form>
+
+
+        <form>
+            <h2>Delete Note</h2>
+            <fieldset>
+                <label>Id</label>
+                <input type="text" id="deleteNoteId">
+            </fieldset>
+                
+            <button type="submit" id="deleteNote">Delete</button>
+        </form>
+
+    </div>
+
+    <div id="results"></div>
+    <script src="./api.js"></script>
 </body>
 </html>
